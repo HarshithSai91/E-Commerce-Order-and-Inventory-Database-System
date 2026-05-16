@@ -1,49 +1,200 @@
 USE online_retail_db;
 
-INSERT INTO Customers (first_name, last_name, email) 
-VALUES
-('John', 'Doe', 'john.doe@email.com'),
-('Jane', 'Smith', 'jane.smith@email.com'),
-('Bob', 'Johnson', 'bob.j@email.com');
+INSERT INTO Customers (first_name, last_name, email, phone, city, state) VALUES
+('Aarav', 'Sharma', 'aarav.sharma@example.com', '9876543210', 'Mumbai', 'Maharashtra'),
+('Priya', 'Reddy', 'priya.reddy@example.com', '9876543211', 'Hyderabad', 'Telangana'),
+('Rahul', 'Verma', 'rahul.verma@example.com', '9876543212', 'Delhi', 'Delhi'),
+('Sneha', 'Patel', 'sneha.patel@example.com', '9876543213', 'Ahmedabad', 'Gujarat'),
+('Kiran', 'Rao', 'kiran.rao@example.com', '9876543214', 'Bengaluru', 'Karnataka'),
+('Meera', 'Nair', 'meera.nair@example.com', '9876543215', 'Kochi', 'Kerala'),
+('Vikram', 'Singh', 'vikram.singh@example.com', '9876543216', 'Jaipur', 'Rajasthan'),
+('Ananya', 'Iyer', 'ananya.iyer@example.com', '9876543217', 'Chennai', 'Tamil Nadu'),
+('Rohit', 'Mehta', 'rohit.mehta@example.com', '9876543218', 'Pune', 'Maharashtra'),
+('Divya', 'Joshi', 'divya.joshi@example.com', '9876543219', 'Nagpur', 'Maharashtra'),
+('Arjun', 'Kapoor', 'arjun.kapoor@example.com', '9876543220', 'Lucknow', 'Uttar Pradesh'),
+('Neha', 'Gupta', 'neha.gupta@example.com', '9876543221', 'Surat', 'Gujarat'),
+('Manish', 'Kumar', 'manish.kumar@example.com', '9876543222', 'Indore', 'Madhya Pradesh'),
+('Pooja', 'Desai', 'pooja.desai@example.com', '9876543223', 'Vadodara', 'Gujarat'),
+('Sahil', 'Malhotra', 'sahil.malhotra@example.com', '9876543224', 'Bhopal', 'Madhya Pradesh');
 
+INSERT INTO Products (name, category, description, price, stock_quantity) VALUES
+('Wireless Mouse', 'Electronics', 'Ergonomic wireless mouse', 599.00, 80),
+('Mechanical Keyboard', 'Electronics', 'RGB mechanical keyboard', 2499.00, 50),
+('Laptop Stand', 'Accessories', 'Adjustable aluminum laptop stand', 899.00, 70),
+('USB-C Cable', 'Accessories', 'Fast charging USB-C cable', 299.00, 150),
+('Bluetooth Speaker', 'Electronics', 'Portable bluetooth speaker', 1799.00, 45),
+('Water Bottle', 'Home', 'Stainless steel water bottle', 399.00, 100),
+('Notebook', 'Stationery', 'A5 ruled notebook', 99.00, 250),
+('Pen Set', 'Stationery', 'Pack of 10 pens', 149.00, 200),
+('Desk Lamp', 'Home', 'LED study desk lamp', 999.00, 60),
+('Backpack', 'Fashion', 'Laptop backpack', 1399.00, 65),
+('Running Shoes', 'Fashion', 'Lightweight running shoes', 2799.00, 40),
+('Smart Watch', 'Electronics', 'Fitness tracking smartwatch', 3499.00, 30),
+('Phone Cover', 'Accessories', 'Shockproof phone cover', 249.00, 120),
+('Earphones', 'Electronics', 'Wired earphones with microphone', 799.00, 90),
+('Coffee Mug', 'Home', 'Ceramic coffee mug', 199.00, 150),
+('Power Bank', 'Electronics', '10000mAh power bank', 1299.00, 55),
+('T-Shirt', 'Fashion', 'Cotton t-shirt', 499.00, 120),
+('Jeans', 'Fashion', 'Slim fit jeans', 1599.00, 55),
+('Calculator', 'Stationery', 'Scientific calculator', 699.00, 70),
+('Office Chair', 'Home', 'Ergonomic office chair', 5499.00, 25);
 
-INSERT INTO Products (name, price, stock_quantity)
-VALUES
-('Laptop', 1200.00, 50),
-('Mouse', 25.00, 150),
-('Keyboard', 75.00, 100),
-('Headphones', 150.00, 75);
+INSERT INTO Orders (customer_id, order_date, status) VALUES
+(1, '2025-10-21 10:15:00', 'Delivered'),
+(2, '2025-10-22 11:30:00', 'Delivered'),
+(3, '2025-10-23 09:45:00', 'Shipped'),
+(4, '2025-10-24 14:20:00', 'Delivered'),
+(5, '2025-10-25 16:10:00', 'Pending'),
+(6, '2025-10-26 12:40:00', 'Delivered'),
+(7, '2025-10-27 18:05:00', 'Delivered'),
+(8, '2025-10-28 13:25:00', 'Delivered'),
+(9, '2025-10-29 15:35:00', 'Shipped'),
+(10, '2025-10-30 17:50:00', 'Delivered'),
+(11, '2025-11-01 10:10:00', 'Delivered'),
+(12, '2025-11-02 11:05:00', 'Pending'),
+(13, '2025-11-03 12:15:00', 'Delivered'),
+(14, '2025-11-04 09:30:00', 'Shipped'),
+(15, '2025-11-05 14:45:00', 'Delivered'),
+(1, '2025-11-06 16:20:00', 'Delivered'),
+(2, '2025-11-07 10:55:00', 'Delivered'),
+(3, '2025-11-08 13:10:00', 'Delivered'),
+(4, '2025-11-09 15:05:00', 'Pending'),
+(5, '2025-11-10 17:40:00', 'Delivered'),
+(6, '2025-11-11 09:25:00', 'Shipped'),
+(7, '2025-11-12 11:45:00', 'Delivered'),
+(8, '2025-11-13 12:35:00', 'Delivered'),
+(9, '2025-11-14 14:55:00', 'Pending'),
+(10, '2025-11-15 16:30:00', 'Delivered'),
+(11, '2025-11-16 18:10:00', 'Delivered'),
+(12, '2025-11-17 10:05:00', 'Shipped'),
+(13, '2025-11-18 13:15:00', 'Delivered'),
+(14, '2025-11-19 15:45:00', 'Delivered'),
+(15, '2025-11-20 17:25:00', 'Delivered'),
+(1, '2025-11-21 09:35:00', 'Pending'),
+(2, '2025-11-22 11:50:00', 'Delivered'),
+(3, '2025-11-23 13:40:00', 'Delivered'),
+(4, '2025-11-24 16:05:00', 'Shipped'),
+(5, '2025-11-25 18:30:00', 'Delivered'),
+(6, '2025-11-26 10:45:00', 'Delivered'),
+(7, '2025-11-27 12:20:00', 'Pending'),
+(8, '2025-11-28 14:35:00', 'Delivered'),
+(9, '2025-11-29 16:50:00', 'Shipped'),
+(10, '2025-11-30 18:15:00', 'Delivered');
 
+INSERT INTO Order_Items (order_id, product_id, quantity, price_per_item) VALUES
+(1, 1, 2, 599.00),
+(1, 4, 1, 299.00),
+(2, 5, 1, 1799.00),
+(2, 7, 3, 99.00),
+(3, 10, 1, 1399.00),
+(3, 13, 2, 249.00),
+(4, 12, 1, 3499.00),
+(5, 6, 2, 399.00),
+(5, 8, 2, 149.00),
+(6, 2, 1, 2499.00),
+(6, 3, 1, 899.00),
+(7, 11, 1, 2799.00),
+(7, 15, 2, 199.00),
+(8, 16, 1, 1299.00),
+(8, 14, 2, 799.00),
+(9, 18, 1, 1599.00),
+(10, 20, 1, 5499.00),
+(10, 4, 2, 299.00),
+(11, 1, 1, 599.00),
+(11, 7, 5, 99.00),
+(12, 5, 2, 1799.00),
+(13, 17, 3, 499.00),
+(13, 15, 1, 199.00),
+(14, 19, 1, 699.00),
+(14, 8, 4, 149.00),
+(15, 9, 1, 999.00),
+(15, 6, 1, 399.00),
+(16, 3, 2, 899.00),
+(16, 13, 3, 249.00),
+(17, 12, 1, 3499.00),
+(17, 4, 3, 299.00),
+(18, 10, 2, 1399.00),
+(19, 2, 1, 2499.00),
+(19, 14, 1, 799.00),
+(20, 11, 1, 2799.00),
+(20, 17, 2, 499.00),
+(21, 16, 2, 1299.00),
+(22, 18, 1, 1599.00),
+(22, 7, 6, 99.00),
+(23, 20, 1, 5499.00),
+(24, 1, 2, 599.00),
+(24, 5, 1, 1799.00),
+(25, 4, 5, 299.00),
+(25, 8, 3, 149.00),
+(26, 9, 1, 999.00),
+(26, 15, 4, 199.00),
+(27, 13, 4, 249.00),
+(27, 14, 1, 799.00),
+(28, 6, 3, 399.00),
+(28, 7, 2, 99.00),
+(29, 3, 1, 899.00),
+(29, 10, 1, 1399.00),
+(30, 12, 1, 3499.00),
+(30, 16, 1, 1299.00),
+(31, 11, 1, 2799.00),
+(31, 19, 1, 699.00),
+(32, 17, 4, 499.00),
+(32, 15, 2, 199.00),
+(33, 2, 1, 2499.00),
+(33, 4, 2, 299.00),
+(34, 18, 2, 1599.00),
+(35, 5, 1, 1799.00),
+(35, 9, 1, 999.00),
+(36, 20, 1, 5499.00),
+(36, 13, 2, 249.00),
+(37, 1, 1, 599.00),
+(37, 14, 1, 799.00),
+(37, 8, 2, 149.00),
+(38, 10, 1, 1399.00),
+(38, 16, 1, 1299.00),
+(39, 12, 1, 3499.00),
+(39, 7, 3, 99.00),
+(40, 6, 2, 399.00),
+(40, 15, 5, 199.00);
 
-INSERT INTO Orders (Customers_customer_id, status) 
-VALUES
-(1, 'Shipped');
-
-
-
-INSERT INTO Order_Items (Orders_order_id, Products_product_id, quantity, price_per_item)
-VALUES
-(1, 1, 1, 1200.00),
-(1, 2, 1, 25.00);
-
-
-INSERT INTO Payments (Orders_order_id, amount, payment_method)
-VALUES
-(1, 1225.00, 'Credit Card');
-
-
-INSERT INTO Orders (Customers_customer_id, status) 
-VALUES
-(2, 'Pending');
-
-
-
-INSERT INTO Order_Items (Orders_order_id, Products_product_id, quantity, price_per_item)
-VALUES
-(2, 3, 1, 75.00),
-(2, 4, 1, 150.00);
-
-
-INSERT INTO Payments (Orders_order_id, amount, payment_method)
-VALUES
-(2, 225.00, 'PayPal');
+INSERT INTO Payments (order_id, payment_date, amount, payment_method, status) VALUES
+(1, '2025-10-21 10:20:00', 1497.00, 'UPI', 'Completed'),
+(2, '2025-10-22 11:35:00', 2096.00, 'Credit Card', 'Completed'),
+(3, '2025-10-23 09:50:00', 1897.00, 'Debit Card', 'Completed'),
+(4, '2025-10-24 14:25:00', 3499.00, 'UPI', 'Completed'),
+(5, '2025-10-25 16:15:00', 1096.00, 'Cash on Delivery', 'Pending'),
+(6, '2025-10-26 12:45:00', 3398.00, 'Credit Card', 'Completed'),
+(7, '2025-10-27 18:10:00', 3197.00, 'Debit Card', 'Completed'),
+(8, '2025-10-28 13:30:00', 2897.00, 'UPI', 'Completed'),
+(9, '2025-10-29 15:40:00', 1599.00, 'UPI', 'Completed'),
+(10, '2025-10-30 17:55:00', 6097.00, 'Credit Card', 'Completed'),
+(11, '2025-11-01 10:15:00', 1094.00, 'UPI', 'Completed'),
+(12, '2025-11-02 11:10:00', 3598.00, 'Cash on Delivery', 'Pending'),
+(13, '2025-11-03 12:20:00', 1696.00, 'UPI', 'Completed'),
+(14, '2025-11-04 09:35:00', 1295.00, 'Debit Card', 'Completed'),
+(15, '2025-11-05 14:50:00', 1398.00, 'Credit Card', 'Completed'),
+(16, '2025-11-06 16:25:00', 2545.00, 'UPI', 'Completed'),
+(17, '2025-11-07 11:00:00', 4396.00, 'Credit Card', 'Completed'),
+(18, '2025-11-08 13:15:00', 2798.00, 'UPI', 'Completed'),
+(19, '2025-11-09 15:10:00', 3298.00, 'Cash on Delivery', 'Pending'),
+(20, '2025-11-10 17:45:00', 3797.00, 'UPI', 'Completed'),
+(21, '2025-11-11 09:30:00', 2598.00, 'Debit Card', 'Completed'),
+(22, '2025-11-12 11:50:00', 2193.00, 'UPI', 'Completed'),
+(23, '2025-11-13 12:40:00', 5499.00, 'Credit Card', 'Completed'),
+(24, '2025-11-14 15:00:00', 2997.00, 'Cash on Delivery', 'Pending'),
+(25, '2025-11-15 16:35:00', 1942.00, 'UPI', 'Completed'),
+(26, '2025-11-16 18:15:00', 1795.00, 'Credit Card', 'Completed'),
+(27, '2025-11-17 10:10:00', 1795.00, 'Debit Card', 'Completed'),
+(28, '2025-11-18 13:20:00', 1395.00, 'UPI', 'Completed'),
+(29, '2025-11-19 15:50:00', 2298.00, 'UPI', 'Completed'),
+(30, '2025-11-20 17:30:00', 4798.00, 'Credit Card', 'Completed'),
+(31, '2025-11-21 09:40:00', 3498.00, 'Cash on Delivery', 'Pending'),
+(32, '2025-11-22 11:55:00', 2394.00, 'UPI', 'Completed'),
+(33, '2025-11-23 13:45:00', 3097.00, 'Debit Card', 'Completed'),
+(34, '2025-11-24 16:10:00', 3198.00, 'Credit Card', 'Completed'),
+(35, '2025-11-25 18:35:00', 2798.00, 'UPI', 'Completed'),
+(36, '2025-11-26 10:50:00', 5997.00, 'Credit Card', 'Completed'),
+(37, '2025-11-27 12:25:00', 1696.00, 'Cash on Delivery', 'Pending'),
+(38, '2025-11-28 14:40:00', 2698.00, 'UPI', 'Completed'),
+(39, '2025-11-29 16:55:00', 3796.00, 'Debit Card', 'Completed'),
+(40, '2025-11-30 18:20:00', 1793.00, 'UPI', 'Completed');
